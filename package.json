@@ -1,24 +1,13 @@
 {
-  "author": "WeAreAthlon <hello@weareathlon.com> (https://www.weareathlon.com)",
-  "name": "@weareathlon/frontend-webpack-boilerplate",
-  "version": "5.5.0",
-  "description": "Starter project template boilerplate based on Webpack with SASS/PostCSS and babel ES6/7 support.",
-  "homepage": "https://github.com/WeAreAthlon/frontend-webpack-boilerplate#readme",
-  "browserslist": [
-    "last 2 versions",
-    "> 5%"
-  ],
+  "author": "Mikhail Gotsko <Shturmfcng@gmail.com>",
+  "name": "to-do_list_senla_js",
+  "version": "1.0.0",
+  "description": "",
+  "homepage": "https://github.com/Shturmfcng/Senla_JS#readme",
+  "browserslist": [],
   "bugs": {
-    "url": "https://github.com/WeAreAthlon/frontend-webpack-boilerplate/issues",
-    "email": "plamen@athlonsofia.com"
+    "url": "https://github.com/Shturmfcng/Senla_JS/issues"
   },
-  "contributors": [
-    {
-      "name": "Plamen Nikolov",
-      "email": "me@pnikoloff.com",
-      "url": "https://pnikoloff.com"
-    }
-  ],
   "devDependencies": {
     "@babel/core": "^7.13.10",
     "@babel/preset-env": "^7.13.12",
@@ -66,11 +55,10 @@
     "template",
     "setup"
   ],
-  "license": "MIT",
-  "private": false,
+  "license": "ISC",
   "repository": {
     "type": "git",
-    "url": "git@github.com:WeAreAthlon/frontend-webpack-boilerplate.git"
+    "url": "git+https://github.com/Shturmfcng/Senla_JS.git"
   },
   "scripts": {
     "build": "webpack --config configuration/webpack.dev.config.js --mode=development",
