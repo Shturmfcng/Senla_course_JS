@@ -1,6 +1,10 @@
 import "../scss/app.scss";
 
-/* Your JS Code goes here */
+function addTask() {
+  let task = document.createElement("li");
+  task.className = "task";
+  task.innerHTML = "";
+  tasks.append(task);
+}
 
-/* Demo JS */
-import "./demo.js";
+button.addEventListener("click", addTask);
