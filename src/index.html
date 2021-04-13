@@ -13,7 +13,7 @@
     <div class="header__wrapper">
       <div class="header__logo">
         <a href="https://senlainc.com/" target="_blank">
-          <img src="../images/content/logo.svg" alt="SENLA - Software Engineering Laboratory">
+          <img src="images/content/logo.svg" alt="SENLA - Software Engineering Laboratory">
         </a>
       </div>
       <input class="header__search" placeholder="Search task for to do">
@@ -33,17 +33,13 @@
       <form class="add-task__wrapper">
         <label for="newTask">New Task</label>
         <textarea id="newTask"></textarea>
-        <button class="btn btn--primary" id="button" type="button">ADD</button>
+        <button id="add-task__button" class="btn btn--primary" type="button">ADD</button>
       </form>
     </section>
 
     <section>
       <ul id="tasks">
-        <li class="task">
-          <span class="task__text">тест</span>
-          <button class="task__markImportant"></button>
-          <button class="task__remove"></button>
-        </li>
+        <!-- Тут добавляются наши задачи -->
       </ul>
     </section>
   </main>

@@ -36,10 +36,15 @@ body {
     border: 1px solid #e2e2e2;
     box-shadow: inset 2px 2px 2px rgba(0, 0, 0, 0.1);
     border-radius: 4px;
+    font-family: inherit;
+    font-size: inherit;
+    font-style: inherit;
+    font-weight: inherit;
+    line-height: inherit;
+    color: $black;
 
     &::placeholder {
       font-weight: 500;
-      color: $black;
       opacity: 0.3;
     }
   }
@@ -99,6 +104,12 @@ main {
     padding: 15px 11px 12px 22px;
     border: 1px solid #dddbda;
     border-radius: 4px;
+    font-family: inherit;
+    font-size: inherit;
+    font-style: inherit;
+    font-weight: inherit;
+    line-height: inherit;
+    color: $text-color;
   }
 
   .btn {
@@ -138,6 +149,18 @@ main {
   background: $white;
   box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.1);
 
+  &--active {
+    text-decoration-line: none;
+  }
+
+  &--done {
+    text-decoration-line: line-through;
+  }
+
+  &--important {
+    font-weight: bold;
+  }
+
   /*&__text::before {
     content: "";
     width: 20px;
@@ -153,7 +176,7 @@ main {
     height: 36px;
     padding: 10px 16px;
     border-radius: 16px;
-    background: rgba(16, 177, 88, 0.8);
+    background: #38b46c;
     box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.4);
     font-size: 14px;
     font-weight: 500;
@@ -162,6 +185,10 @@ main {
     color: $white;
     letter-spacing: 0.75px;
     text-transform: uppercase;
+
+    &--not {
+      background: #bdbdbd;
+    }
   }
 
   &__remove {
