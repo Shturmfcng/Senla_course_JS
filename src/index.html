@@ -9,37 +9,37 @@
 </head>
 
 <body>
+  <div class="background"></div>
   <header class="header">
-    <div class="header__wrapper">
-      <div class="header__logo">
-        <a href="https://senlainc.com/" target="_blank">
-          <img src="images/content/logo.svg" alt="SENLA - Software Engineering Laboratory">
-        </a>
-      </div>
-      <input class="header__search" placeholder="Search task for to do">
-    </div>
+    <a class="header__logo" href="https://senlainc.com/" target="_blank" role="banner">
+      <img src="images/content/logo.svg" alt="SENLA - Software Engineering Laboratory">
+    </a>
+    <form class="header__search" role="search">
+      <input id="searchTasks" type="search" placeholder="Search task for to do"
+        aria-label="Search by tasks" autocomplete="off">
+    </form>
   </header>
 
-  <main>
-    <nav class="tabs">
-      <ul class="tabs__wrapper">
-        <li class="tab tab--active">All</li>
-        <li class="tab">Active</li>
-        <li class="tab">Done</li>
+  <main class="main">
+    <nav class="tabs" role="tabpanel">
+      <ul class="tabs__wrapper" role="tablist">
+        <li class="tab tab--active" tabindex="0" role="tab">All</li>
+        <li class="tab" tabindex="0" role="tab">Active</li>
+        <li class="tab" tabindex="0" role="tab">Done</li>
       </ul>
     </nav>
 
     <section class="add-task">
       <form class="add-task__wrapper">
         <label for="newTask">New Task</label>
-        <textarea id="newTask"></textarea>
-        <button id="add-task__button" class="btn btn--primary" type="button">ADD</button>
+        <textarea id="newTask" role="textbox" maxlength="250"
+          title="maximum 250 simbols..."></textarea>
+        <button id="addTaskButton" class="btn btn--primary" type="button">ADD</button>
       </form>
     </section>
 
     <section>
       <ul id="tasks">
-        <!-- Тут добавляются наши задачи -->
       </ul>
     </section>
   </main>
