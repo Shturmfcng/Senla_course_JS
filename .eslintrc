@@ -3,7 +3,9 @@
   "env": {
     "node": true,
     "jasmine": true,
-    "jquery": true
+    "jquery": true,
+    "browser": true,
+    "es6": true
   },
   "rules": {
     "no-use-before-define": 0,
