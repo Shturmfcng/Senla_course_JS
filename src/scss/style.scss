@@ -332,7 +332,7 @@ body {
     opacity: 0;
     height: 40px;
     border-radius: 50%;
-    background: url(../images/icons/delete.svg);
+    background: url(../images/icons/delete.svg) no-repeat;
     box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.4);
 
     &:hover,

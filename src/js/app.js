@@ -1,7 +1,5 @@
 import "../scss/app.scss";
 
-("use strict");
-
 const searchTasks = document.getElementById("searchTasks");
 const newTask = document.getElementById("newTask");
 const addTaskButton = document.getElementById("addTaskButton");

@@ -154,5 +154,5 @@ module.exports = {
       ],
     }),
   ].concat(htmlPluginEntries),
-  target: "web",
+  target: ["web", "es5"],
 };
