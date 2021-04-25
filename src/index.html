@@ -3,8 +3,12 @@
 
 <head>
   <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport"
     content="width=device-width, initial-scale=0.86, maximum-scale=3.0, minimum-scale=0.86" />
+  <!--[if IE]>
+  <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
   <title>to-do list</title>
 </head>
 
@@ -20,8 +24,8 @@
     </form>
   </header>
 
-  <main class="main">
-    <nav class="tabs" role="tabpanel">
+  <main>
+    <nav class="tabs">
       <ul class="tabs__wrapper" role="tablist">
         <li class="tab tab--active" tabindex="0" role="tab">All</li>
         <li class="tab" tabindex="0" role="tab">Active</li>
@@ -32,8 +36,8 @@
     <section class="add-task">
       <form class="add-task__wrapper">
         <label for="newTask">New Task</label>
-        <textarea id="newTask" role="textbox" maxlength="250"
-          title="maximum 250 simbols..."></textarea>
+        <textarea id="newTask" role="textbox" maxlength="200"
+          title="maximum 200 simbols..."></textarea>
         <button id="addTaskButton" class="btn btn--primary" type="button">ADD</button>
       </form>
     </section>
@@ -43,7 +47,8 @@
       </ul>
     </section>
   </main>
-  <script src="https://cdn.polyfill.io/v1/polyfill.js?Element.prototype.closest"></script>
+  <script src="https://polyfill.io/v3/polyfill.js?features=default%2ClocalStorage%2Chtml5shiv">
+  </script>
 </body>
 
 </html>
