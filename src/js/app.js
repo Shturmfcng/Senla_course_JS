@@ -29,16 +29,19 @@ function addClass(array, aClass) {
   }
 }
 
-function getSearchResult(e) {
+function getSearchResult() {
   let tabActive = document.querySelector(".tab--active");
   let tasksAll = document.querySelectorAll(".task");
   let tasksActive = document.querySelectorAll(".task--active");
   let tasksDone = document.querySelectorAll(".task--done");
 
-  function getSearchResult(e, tabActive) {
+  function getSearchResult(tabActive) {
     for (let task of tabActive) {
       if (
-        !task.querySelector("span").textContent.toLowerCase().includes(e.target.value.toLowerCase())
+        !task
+          .querySelector("span")
+          .textContent.toLowerCase()
+          .includes(searchTasks.value.toLowerCase())
       ) {
         task.classList.add("display--none");
       } else {
@@ -48,11 +51,11 @@ function getSearchResult(e) {
   }
 
   if (tabActive.textContent === "Active") {
-    getSearchResult(e, tasksActive);
+    getSearchResult(tasksActive);
   } else if (tabActive.textContent === "Done") {
-    getSearchResult(e, tasksDone);
+    getSearchResult(tasksDone);
   } else {
-    getSearchResult(e, tasksAll);
+    getSearchResult(tasksAll);
   }
 }
 
@@ -146,18 +149,26 @@ function taskStateSwitch() {
   removeClass(tasksActive, "display--none");
 }
 
-document.addEventListener("DOMContentLoaded", loadToDos);
+document.addEventListener("DOMContentLoaded", function (e) {
+  loadToDos(e);
+  let tasksAll = document.querySelectorAll(".task");
+  removeClass(tasksAll, "display--none");
+});
 searchTasks.addEventListener("input", getSearchResult);
 searchTasks.addEventListener("keypress", function (e) {
   if (e.key === "Enter") {
-    getSearchResult(e);
+    getSearchResult();
     e.preventDefault();
   }
 });
-tabs.addEventListener("click", switchTabs);
+tabs.addEventListener("click", function (e) {
+  switchTabs(e);
+  getSearchResult();
+});
 tabs.addEventListener("keypress", function (e) {
   if (e.key === "Enter") {
     switchTabs(e);
+    getSearchResult();
   }
 });
 newTask.addEventListener("keypress", function (e) {
